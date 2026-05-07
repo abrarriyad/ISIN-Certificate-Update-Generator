@@ -31,7 +31,7 @@ public class CertificateUpdate implements Callable<String> {
     }
 
     private double generatePrice(){
-        double randomPrice = Utils.getRandomValue().nextDouble(MIN_PRICE, MAX_PRICE+0.01);
+        double randomPrice = Utils.getRandomValue().nextDouble(MIN_PRICE, MAX_PRICE);
 
         return Utils.roundToTwoDecimals(randomPrice);
     }
