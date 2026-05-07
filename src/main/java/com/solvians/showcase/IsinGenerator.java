@@ -12,11 +12,11 @@ public class IsinGenerator {
         StringBuilder sb = new StringBuilder();
         sb.append(randomUpperCaseLetters).append(randomAlphaNums);
 
-        System.out.println(sb);
+//        System.out.println(sb);
 
         int checkDigit = Utils.calculateCheckDigit(sb.toString());
 
-        System.out.println(checkDigit);
+//        System.out.println(checkDigit);
 
         return sb.append(checkDigit).toString();
     }

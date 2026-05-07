@@ -4,8 +4,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class IsinGeneratorTest {
 
@@ -21,5 +20,19 @@ public class IsinGeneratorTest {
 
         assertEquals(12, isinGenerator.generate().length());
     }
+
+    @Test
+    public void isinStartsWithTwoLetters(){
+        String isin = isinGenerator.generate();
+        assertTrue(Character.isLetter(isin.charAt(0)));
+        assertTrue(Character.isLetter(isin.charAt(1)));
+    }
+
+    @Test
+    public void isinLastCharIsDigit(){
+        String isin = isinGenerator.generate();
+        assertTrue(Character.isDigit(isin.charAt(11)));
+    }
+
 
 }
