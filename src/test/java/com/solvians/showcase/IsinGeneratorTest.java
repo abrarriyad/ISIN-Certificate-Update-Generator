@@ -17,7 +17,8 @@ public class IsinGeneratorTest {
     }
 
     @Test
-    public void should_generate12CharsIsin(){
+    public void generate12CharsIsin(){
+
         assertEquals(12, isinGenerator.generate().length());
     }
 
