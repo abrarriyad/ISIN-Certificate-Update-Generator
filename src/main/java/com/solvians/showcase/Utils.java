@@ -13,7 +13,7 @@ public class Utils {
 
         for(int i=0; i<length; i++){
             int randomIndex = getRandomValue().nextInt(input.length());
-            System.out.println(randomIndex);
+//            System.out.println(randomIndex);
             sb.append(input.charAt(randomIndex));
         }
         return sb.toString();
@@ -66,6 +66,10 @@ public class Utils {
             }
 
             return sum;
+    }
+
+    public static double roundToTwoDecimals(double input){
+        return Math.round(input*100.0)/100.0;
     }
 
 
